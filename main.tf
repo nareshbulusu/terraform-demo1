@@ -13,7 +13,7 @@ module "storage_account" {
   version                   = "0.1.1"
   # insert required variables here
   name                      = var.storageaccountname
-  resource_group_name       = azurerm_resource_group.example.name
+  resource_group_name       = var.resource_group_name
   location                  = var.azure_region
   account_tier              = var.account_tier
   account_replication_type  = var.account_replication_type
