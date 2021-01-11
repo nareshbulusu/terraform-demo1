@@ -12,7 +12,7 @@ module "storage_account" {
   source                    = "app.terraform.io/narulu/storage_account/azurerm"
   version                   = "0.1.1"
   # insert required variables here
-  name                      = var.storageaccountname
+  storageaccountname        = var.storageaccountname
   resource_group_name       = var.resource_group_name
   location                  = var.azure_region
   account_tier              = var.account_tier
