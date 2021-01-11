@@ -1,21 +1,21 @@
 module "resource_group" {
-  source  = "app.terraform.io/narulu/resource_group/azurerm"
-  version = "0.1.6"
+  source                    = "app.terraform.io/narulu/resource_group/azurerm"
+  version                   = "0.1.6"
   
-  resource_group_name = var.resource_group_name
-  azure_region = var.azure_region
-  tags = var.tags
+  resource_group_name       = var.resource_group_name
+  azure_region              = var.azure_region
+  tags                      = var.tags
 }
 
   
 module "storage_account" {
-  source  = "app.terraform.io/narulu/storage_account/azurerm"
-  version = "0.1.1"
+  source                    = "app.terraform.io/narulu/storage_account/azurerm"
+  version                   = "0.1.1"
   # insert required variables here
-  name = var.storageaccountname
-  resource_group_name = azurerm_resource_group.example.name
-  location = var.azure_region
-  account_tier = var.account_tier
-  account_replication_type = var.account_replication_type
-  tags = var.tags
+  name                      = var.storageaccountname
+  resource_group_name       = azurerm_resource_group.example.name
+  location                  = var.azure_region
+  account_tier              = var.account_tier
+  account_replication_type  = var.account_replication_type
+  tags                      = var.tags
 }
