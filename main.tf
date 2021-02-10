@@ -10,7 +10,7 @@ module "resource_group" {
   
 module "storage_account" {
   source                    = "app.terraform.io/narulu/storage_account/azurerm"
-  version                   = "0.1.1"
+  version                   = "0.1.2"
 
   storageaccountname        = var.storageaccountname
   resource_group_name       = module.resource_group.resource_group_name
